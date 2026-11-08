@@ -1,0 +1,18 @@
+[project]
+name = "supply-chain-sql-analytics"
+version = "1.0.0"
+description = "Ten supply-chain questions answered in SQL on a synthetic distributor dataset."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["SIM108"]  # an if/else reads better than a long ternary here
